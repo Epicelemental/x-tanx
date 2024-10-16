@@ -1,0 +1,30 @@
+//declaring variables
+var x = 89;
+var xrad = x * Math.PI/180; 
+var change = 1;
+var tanx = Math.tan(xrad);
+var diff = 1
+var olddiff = 99
+//works until they are equal
+for (diff = 1; Math.abs(diff) > 0; diff = x - tanx)
+    {
+        if (x < tanx) {
+            x = x + change;
+        }else if (x > tanx) {
+            x = x - change;
+        }
+
+        if (olddiff < diff){
+            change = change / 10;
+        }
+        
+        xrad = x * Math.PI/180;
+        
+        console.log ("current difference: " + diff)
+        console.log ("old difference: " + olddiff)
+        
+        olddiff = diff;
+    }
+if (diff = 0){
+    console.log (x)
+}
